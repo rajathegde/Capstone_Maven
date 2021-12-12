@@ -59,7 +59,6 @@ public class SignUpPage {
 		wait.until(ExpectedConditions.visibilityOf(SignBtn));
 		SignBtn.click();
 		SignUpLink.click();
-		test.log(LogStatus.PASS, "Click on Sign up Link", "Clicked on Sign Up Link");
 		email.sendKeys(Emailval);
 		password.sendKeys(Passwordval);
 		Confirmpwd.sendKeys(Passwordval);

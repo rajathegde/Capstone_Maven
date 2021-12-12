@@ -42,15 +42,9 @@ public class Baseclass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(4000, TimeUnit.MILLISECONDS);			
 	}
-//		@AfterMethod
-//		public void teardown() {
-//			driver.quit();
-//		}
-//	
-//		@AfterTest
-//		public void ReportTearDown() {
-//			report.flush();
-//			report.close();
-//	}
+		@AfterMethod
+		public void teardown() {
+			driver.quit();
+		}
 
 }

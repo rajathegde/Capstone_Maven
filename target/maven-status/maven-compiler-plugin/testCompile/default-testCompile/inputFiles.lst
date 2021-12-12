@@ -1,5 +1,7 @@
 /home/rajatchicisco/eclipse-workspace/Capstone_Maven/src/test/java/test/Baseclass.java
 /home/rajatchicisco/eclipse-workspace/Capstone_Maven/src/test/java/test/SignUpPageTest.java
+/home/rajatchicisco/eclipse-workspace/Capstone_Maven/src/test/java/test/AfterLoginTest.java
+/home/rajatchicisco/eclipse-workspace/Capstone_Maven/src/test/java/pages/AfterLoginPage.java
 /home/rajatchicisco/eclipse-workspace/Capstone_Maven/src/test/java/pages/LoginPage.java
 /home/rajatchicisco/eclipse-workspace/Capstone_Maven/src/test/java/test/LoginPageTest.java
 /home/rajatchicisco/eclipse-workspace/Capstone_Maven/src/test/java/pages/SignUpPage.java

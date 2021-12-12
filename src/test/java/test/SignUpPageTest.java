@@ -11,13 +11,11 @@ import pages.SignUpPage;
 
 public class SignUpPageTest extends Baseclass {
 
-	XSSFWorkbook wbook;
-	XSSFSheet sheet;
 	
 	@Parameters({"Email","Password","FirstName","LastName","Age","Address"})
 	@Test
 	public void signupTest(String Emailval,String Passwordval,String FirstNameval,String LastNameval,String Ageval,String Addressval) {
-		test = report.startTest("SignUp Page");
+		
 		SignUpPage Signup = new SignUpPage();
 		Signup.signup(Emailval, Passwordval, FirstNameval, LastNameval, Ageval, Addressval);
 		

@@ -1,3 +1,7 @@
-pages/SignUpPage.class
 test/Baseclass.class
+test/AfterLoginTest.class
+pages/AfterLoginPage.class
+pages/SignUpPage.class
 test/SignUpPageTest.class
+pages/LoginPage.class
+test/LoginPageTest.class
