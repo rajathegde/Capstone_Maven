@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import test.Baseclass;
 
@@ -45,10 +46,19 @@ public class LoginPage {
 		LoginFinal.click();
 	}
 	
-	public void verify() {
+	public void Positiveverify() {
 		String ExpText = "SPORTY SHOES - DASHBOARD";
 		String ActualText = Header.getText();
+		
 		Assert.assertEquals(ActualText, ExpText);
+		test.log(LogStatus.PASS, "Logging in", "Logged in");
+	}
+	
+	public void Negetiveverify() {
+		String ExpURL = "http://localhost:8080/Section7LEP2/loginaction";
+		String ActualURL = driver.getCurrentUrl();
+		Assert.assertEquals(ExpURL, ActualURL);
+		test.log(LogStatus.PASS, "Using Wrong Password", "Not Logged In");
 	}
 	
 

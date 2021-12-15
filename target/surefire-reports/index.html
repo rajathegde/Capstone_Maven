@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.LoginPageTest" hash-for-method="LoginTest(abc@gmail.com, ABCdefg1234##)">LoginTest(abc@gmail.com, ABCdefg1234##)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.LoginPageTest" hash-for-method="NegetiveLoginTest(abc@gmail.com, STuffg1234##)">NegetiveLoginTest(abc@gmail.com, STuffg1234##)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.LoginPageTest" hash-for-method="PositiveLoginTest(abc@gmail.com, ABCdefg1234##)">PositiveLoginTest(abc@gmail.com, ABCdefg1234##)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -135,9 +140,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginTest(abc@gmail.com, ABCdefg1234##)">
-                  </a> <!-- LoginTest(abc@gmail.com, ABCdefg1234##) -->
-                  <span class="method-name">LoginTest</span>
+                  <a name="NegetiveLoginTest(abc@gmail.com, STuffg1234##)">
+                  </a> <!-- NegetiveLoginTest(abc@gmail.com, STuffg1234##) -->
+                  <span class="method-name">NegetiveLoginTest</span>
+                  <span class="parameters">(abc@gmail.com, STuffg1234##)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PositiveLoginTest(abc@gmail.com, ABCdefg1234##)">
+                  </a> <!-- PositiveLoginTest(abc@gmail.com, ABCdefg1234##) -->
+                  <span class="method-name">PositiveLoginTest</span>
                   <span class="parameters">(abc@gmail.com, ABCdefg1234##)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -192,6 +205,7 @@
     &lt;parameter name=&quot;LastName&quot; value=&quot;Singh&quot;/&gt;
     &lt;parameter name=&quot;Age&quot; value=&quot;24&quot;/&gt;
     &lt;parameter name=&quot;Password&quot; value=&quot;ABCdefg1234##&quot;/&gt;
+    &lt;parameter name=&quot;WrongPassword&quot; value=&quot;STuffg1234##&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.SignUpPageTest&quot;/&gt;
       &lt;class name=&quot;test.LoginPageTest&quot;/&gt;
@@ -235,24 +249,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'afterLogin')
 data.setCell(0, 2, 'test.AfterLoginTest')
-data.setCell(0, 3, 1034);
+data.setCell(0, 3, 1272);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'signupTest')
 data.setCell(1, 2, 'test.SignUpPageTest')
-data.setCell(1, 3, 944);
+data.setCell(1, 3, 1048);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'LoginTest')
+data.setCell(2, 1, 'PositiveLoginTest')
 data.setCell(2, 2, 'test.LoginPageTest')
-data.setCell(2, 3, 461);
+data.setCell(2, 3, 492);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'NegetiveLoginTest')
+data.setCell(3, 2, 'test.LoginPageTest')
+data.setCell(3, 3, 480);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -267,7 +285,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -275,12 +293,16 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">ReportSetup</span>
                 <br/>
+                <span class="ignored-method-name">ReportTearDown</span>
+                <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">test.AfterLoginTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">ReportSetup</span>
+                <br/>
+                <span class="ignored-method-name">ReportTearDown</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -299,46 +321,65 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">109 ms</span>
+                <span class="method-start">99 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">signupTest(abc@gmail.com, ABCdefg1234##, Mahesh, Singh, 24, Bangalore)</span>
-                <span class="method-start">1070 ms</span>
+                <span class="method-start">1074 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">2014 ms</span>
+                <span class="method-start">2123 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">2083 ms</span>
+                <span class="method-start">2193 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginTest(abc@gmail.com, ABCdefg1234##)</span>
-                <span class="method-start">2868 ms</span>
+                <span class="method-name">NegetiveLoginTest(abc@gmail.com, STuffg1234##)</span>
+                <span class="method-start">3108 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">3330 ms</span>
+                <span class="method-start">3588 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">3661 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">PositiveLoginTest(abc@gmail.com, ABCdefg1234##)</span>
+                <span class="method-start">4588 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">5080 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.AfterLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">3397 ms</span>
+                <span class="method-start">5150 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">afterLogin(abc@gmail.com, ABCdefg1234##)</span>
-                <span class="method-start">4200 ms</span>
+                <span class="method-start">6033 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">5234 ms</span>
+                <span class="method-start">7306 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.SignUpPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">ReportTearDown</span>
+                <span class="method-start">7372 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

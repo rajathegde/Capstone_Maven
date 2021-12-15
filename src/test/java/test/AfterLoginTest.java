@@ -15,9 +15,10 @@ public class AfterLoginTest extends Baseclass {
 	@Parameters({"Email","Password"})
 	@Test
 	public void afterLogin(String Emailval,String Passwordval) {
+		test = report.startTest("Check out Test");
 		AfterLoginPage AfterLogin = new AfterLoginPage();
 		AfterLogin.afterlogin(Emailval, Passwordval);
-		
+		report.endTest(test);
 		
 	}
 

@@ -67,7 +67,7 @@ public class SignUpPage {
 		Age.sendKeys(Ageval);
 		Address.sendKeys(Addressval);
 		SignUpFinal.click();
-
+		test.log(LogStatus.PASS, "Sign Up using Provided Details", "Signed Up");
 	}
 
 }
